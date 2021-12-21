@@ -48,7 +48,9 @@ namespace cpp2 {
          */
          /* ----------------------------------------------------------------- */
         mcxi operator+(const mcxi& rhs) {
-            return rhs;
+            mcxi tc(rhs);
+            tc.value_ = this->value_ + rhs.value_;
+            return tc;
         }
 
         /* ----------------------------------------------------------------- */
